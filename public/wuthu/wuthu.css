@@ -1,0 +1,129 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    font-family: "Sniglet", sans-serif;
+    color: darkblue;
+}
+
+h1 {
+    font-size: 66pt;
+    margin: .1em 0;
+}
+
+.main-content {
+    font-family: Verdana, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    background-color: skyblue;
+    color: black;
+}
+
+.head-panel {
+    margin: 1%;
+}
+
+.column-panel {
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
+    margin: 1%;
+}
+
+/* Search Pane */
+
+.search-form {
+    font-size: 24pt;
+    height: 1.5em;
+    border-style: solid;
+    border-color: black;
+    border-radius: .75em;
+}
+.search-form:focus {
+    outline: 0;
+    border-color: darkblue;
+}
+
+.search-input {
+    width: 12em;
+    padding: 0em .75em;
+}
+
+.search-button {
+    width: 5em;
+}
+
+.results {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result {
+    margin: .5em 0;
+    padding: .5em;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+}
+
+.result-hilite {
+    background-color: white;
+    font-weight: bold;
+}
+
+
+/* Weather Pane */
+
+.weather-panel {
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 36px;
+}
+
+.temperature {
+    display: inline-block;
+    vertical-align: top;
+    width: 43%;
+    font-size: 72pt;
+    font-weight: bold;
+    margin: 2% 2% 2% 4%;
+}
+.cold {
+    color: lightcyan;
+}
+.cool {
+    color: blue;
+}
+.hot {
+    color: firebrick;
+}
+
+.details {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin: 2%;
+}
+
+.weather-summary {
+    font-weight: bold;
+    margin: 0;
+}
+
+.weather-items {
+    list-style-type: none;
+    font-size: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.weather-item {
+    margin: .5em 0;
+}
