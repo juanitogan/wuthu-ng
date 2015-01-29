@@ -14,13 +14,14 @@ angular.module("wuthu", [])
 
     wuthuCtl.address = ""; //"Springfield";
     wuthuCtl.results = [];
-    wuthuCtl.weatherData;
+    wuthuCtl.weatherData = "";
 
     ////////////////////////////////////////////////////////////////////////////
     // Search Functions
 
     // Execute the search on the address entered.
     wuthuCtl.search = function () {
+        wuthuCtl.weatherData = "";
         getAddresses(wuthuCtl.address)
     };
 
@@ -87,6 +88,17 @@ angular.module("wuthu", [])
     // Format, and display the weather data.
     function displayWeather(weather) {
         wuthuCtl.weatherData = weather;
+    };
+
+    // Returns a CSS class name to decorate the temperature elements.
+    wuthuCtl.getTemperatureClass = function(temperature) {
+        if (temperature >= 32) {
+            return "hot";
+        } else if (temperature < 0) {
+            return "cold";
+        } else {
+            return "cool";
+        };
     };
 
 })

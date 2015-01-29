@@ -43,10 +43,7 @@
 
         <div id=weather class=weather-panel ng-if=wuthuCtl.weatherData>
             <div class="temperature"
-                ng-class="{ hot:  wuthuCtl.weatherData.currently.temperature >= 32 ,
-                            cool: wuthuCtl.weatherData.currently.temperature <  32 &&
-                                  wuthuCtl.weatherData.currently.temperature >= 0  ,
-                            cold: wuthuCtl.weatherData.currently.temperature <  0  }"
+                ng-class="wuthuCtl.getTemperatureClass(wuthuCtl.weatherData.currently.temperature)"
             >
                 {{wuthuCtl.weatherData.currently.temperature.toFixed()}}°F
             </div>
